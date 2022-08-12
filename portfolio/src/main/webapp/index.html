@@ -10,9 +10,19 @@
     <script src="script.js"></script>
   </head>
 
-  <body onload="get_response()">
-  <p id="response-acquired"></p>
-  
+  <body>
+   
+
+  <form action="/form-handler" method="POST">
+    <p>Contact me!</p>
+    <textarea name="name-input">Your name</textarea>
+    <br/>
+    <textarea name="number-input">Your number</textarea>
+    <br/>
+    <textarea name="email-input">Your email</textarea>
+    <br/>
+    <input type="submit" />
+  </form>
   
     <div id="about">
       <h1>About</h1>
@@ -31,6 +41,8 @@
         <button type=”button” ><a href="https://www.linkedin.com/in/hana-mirbagheri-a35684173/" target="_blank">LinkedIn</a></button>
         <div id="vitae_and_linkedin"></div>
     </div>
+    <button onclick="get_response()">get message</button>
+    <p id="response-acquired"></p>
   </body>
 </html>
 

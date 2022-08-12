@@ -34,7 +34,5 @@ async function get_response(){
 
     const placeholder = document.getElementById('response-acquired');
     let index = Math.floor(Math.random() * 4);
-    const ind = index.toString();
-    const obj = JSON.parse(responsetotext);
-    placeholder.innerHTML = obj.ind;
+    placeholder.innerHTML = obj[ind];
 }

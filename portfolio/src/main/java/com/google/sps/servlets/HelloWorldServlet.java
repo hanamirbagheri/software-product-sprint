@@ -11,12 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 /** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
-    String[] words = {"Hello my name is Hana", "I am in second year computer engineering", "I like to make pottery", "I love to paint"};
+    
 
 
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    String[] words = {"Hello my name is Hana", "I am in second year computer engineering", "I like to make pottery", "I love to paint"};
     String json = convertToJsonUsingGson(words);
     response.setContentType("application/json;");
     response.getWriter().println(json);
