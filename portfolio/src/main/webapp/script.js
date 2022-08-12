@@ -36,3 +36,11 @@ async function get_response(){
     let index = Math.floor(Math.random() * 4);
     placeholder.innerHTML = obj[ind];
 }
+
+async function get_contacts(){
+    const response = await fetch('/list-contacts');
+    const responsetotext = await response.json();
+
+    const placeholder = document.getElementById('contacts-acquired');
+    placeholder.innerHTML = responsetotext;
+}
