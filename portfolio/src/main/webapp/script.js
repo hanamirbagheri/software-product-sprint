@@ -15,6 +15,7 @@
 /**
  * Adds a random greeting to the page.
  */
+
 function addRandomGreeting() {
   const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
@@ -25,4 +26,21 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+}
+
+async function get_response(){
+    const response = await fetch('/hello');
+    const responsetotext = await response.json();
+
+    const placeholder = document.getElementById('response-acquired');
+    let index = Math.floor(Math.random() * 4);
+    placeholder.innerHTML = obj[ind];
+}
+
+async function get_contacts(){
+    const response = await fetch('/list-contacts');
+    const responsetotext = await response.json();
+
+    const placeholder = document.getElementById('contacts-acquired');
+    placeholder.innerHTML = responsetotext;
 }
